@@ -1,0 +1,49 @@
+.cardsContainer {
+  padding: 20px 0;
+  display: flex;
+
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 15px;
+  width: 100%;
+}
+
+.cardTitle {
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.cardPrice {
+  color: green;
+  padding-top: 10px;
+}
+
+.cardLastRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete {
+  width: 20px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 425px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    width: 30%;
+  }
+}
