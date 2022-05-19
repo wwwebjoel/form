@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Form.css";
 
-export default function LoginForm() {
+export default function LoginForm({ setTokenAvailable }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 
@@ -23,6 +23,7 @@ export default function LoginForm() {
       const data = await response.json();
 
       localStorage.setItem("token", data.jwt);
+      setTokenAvailable(true);
     }
 
     submitToBackend();

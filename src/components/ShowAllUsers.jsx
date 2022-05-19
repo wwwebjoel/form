@@ -1,6 +1,7 @@
 import React from "react";
 import jwt_decode from "jwt-decode";
 import LoginForm from "./LoginForm";
+import AllUsers from "./AllUsers";
 
 const ShowAllUsers = () => {
   const token = localStorage.getItem("token");
@@ -8,10 +9,9 @@ const ShowAllUsers = () => {
   if (token) {
     const { isAdmin } = jwt_decode(token);
 
-    if (!isAdmin)
-      return <div>Sorry you are not authorized to access this page</div>;
+    // if (!isAdmin) return <></>;
 
-    return <div>All Users from backend</div>;
+    return <AllUsers />;
   }
   if (!token)
     return (
