@@ -23,7 +23,6 @@ const AllUsers = () => {
     }
   }, [url, reload]);
 
-  console.log(users);
   return (
     <div
       style={{
